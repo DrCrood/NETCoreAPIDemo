@@ -1,0 +1,7 @@
+/.vs/*
+/.git/*
+/NetCoreAPI/bin/*
+/NetCoreAPI/obj/*
+/NetCoreAPI/*.db
+/xunit_Testing/bin/*
+/xunit_Testing/obj/*

@@ -5,7 +5,13 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreAPI", "NetCoreAPI\NetCoreAPI.csproj", "{2C7F4B4F-84F2-4D02-9FA9-B6A79FBF7007}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xunit_ProductTesting", "xunit_Testing\xunit_ProductTesting.csproj", "{1F8828FB-0FEB-44BE-9E8C-1475B6F29BD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "xunit_ProductTesting", "xunit_Testing\xunit_ProductTesting.csproj", "{1F8828FB-0FEB-44BE-9E8C-1475B6F29BD2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{74286D56-6546-4C45-88C3-C17ACF8A878F}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
