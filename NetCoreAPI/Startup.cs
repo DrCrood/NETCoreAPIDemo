@@ -73,6 +73,12 @@ namespace NetCoreAPI
                 config.ReportApiVersions = true;
             });
 
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                    builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+        });
+
             services.AddControllers
                 (
                     //Register the versioning control class
@@ -134,6 +140,7 @@ namespace NetCoreAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors();
 
             //Register the middleware for authentication, add this after app.UseRouting() and before any middlewares that need authentication to access.
             //Enable authentication and use the service registered in the DI container.

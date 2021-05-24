@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Microsoft.Extensions.Options;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 
 namespace NetCoreAPI.Controllers.v1
 {
@@ -54,13 +56,13 @@ namespace NetCoreAPI.Controllers.v1
 
         // POST api/<ProductController>
         [HttpPost]
-        public string Post([FromBody] object value)
+        public ActionResult<Product> Post([FromBody] object value)
         {
             Product p = JsonConvert.DeserializeObject<Product>(value.ToString());
 
             if (p == null)
             {
-                return "you posted invalid data: " + value.ToString();
+                return BadRequest(p);
             }
 
             try
@@ -70,38 +72,72 @@ namespace NetCoreAPI.Controllers.v1
             }
             catch (Exception ex)
             {
-                return "add product error: " + ex.InnerException.Message;
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.InnerException.Message);
             }
 
-            return "add product success: " + p.ToString();
+            return Ok(p);
         }
 
         // PUT api/<ProductController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] object value)
+        public async Task<ActionResult<Product>> Put(int id, [FromBody] object value)
         {
-            Console.WriteLine(value.ToString());
+            Product p = JsonConvert.DeserializeObject<Product>(value.ToString());
+
+            if (p == null || id != p.Id)
+            {
+                return BadRequest(p);
+            }
+
+            var product = await DbContext.Products.FindAsync(id);
+
+            if (product == null)
+            {
+                return BadRequest("Id not found");
+            }
+
+            product.Name = p.Name;
+            product.Price = p.Price;
+            product.Inventory = p.Inventory;
+
+            try
+            {
+                await DbContext.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                if (!ProductExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError, ex.InnerException.Message);
+                }
+            }
+
+            return Ok(p);
         }
 
         // DELETE api/<ProductController>/5
         [HttpDelete("{id}")]
-        public string Delete(int id)
+        public ActionResult<Product> Delete(int id)
         {
             try
             {
                 Product prod = DbContext.Products.Where(pd => pd.Id == id).FirstOrDefault();
                 if (prod == null)
                 {
-                    return "The product doesn't exist";
+                    return NotFound(prod);
                 }
 
                 DbContext.Remove(prod);
                 DbContext.SaveChanges();
-                return "The product has been deleted";
+                return Ok(prod) ;
             }
             catch (Exception e)
             {
-                return e.Message;
+                return StatusCode(StatusCodes.Status500InternalServerError, e.InnerException.Message);
             }
         }
 
@@ -115,6 +151,11 @@ namespace NetCoreAPI.Controllers.v1
         public string Version()
         {
             return "V1.0";
+        }
+
+        private bool ProductExists(int id)
+        {
+            return DbContext.Products.Any(e => e.Id == id);
         }
     }
 }
