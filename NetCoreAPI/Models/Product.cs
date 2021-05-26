@@ -15,7 +15,7 @@ namespace NetCoreAPI.Models
         [Required]
         public int Inventory { get; set; }
         [Required]
-        public int Price { get; set; }
+        public Double Price { get; set; }
         [NotMapped]
         public ITradeMark tradeMark { get; set; }
         public int BulkBuyNumber { get; set; }

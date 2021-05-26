@@ -11,7 +11,7 @@ namespace NetCoreAPI.Interfaces
         public int Id { get; set; }
         string Name { get; set; }
         public int Inventory { get; set; }
-        public int Price { get; set; }
+        public Double Price { get; set; }
         ITradeMark tradeMark { get; set; }
         bool NeedReplenishment(string name);
         Task<int> GetInventoryAsync();
