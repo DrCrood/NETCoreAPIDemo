@@ -1,6 +1,6 @@
 using System;
 
-namespace NetCoreAPI.Models
+namespace DotNET5API.Models
 {
     public class WeatherForecast
     {

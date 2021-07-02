@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using NetCoreAPI.Models;
-using NetCoreAPI.Controllers.v1;
+using DotNET5API.Models;
+using DotNET5API.Controllers.v1;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using NetCoreAPI.Interfaces;
+using DotNET5API.Interfaces;
 using RockLib.Logging;
 using Moq;
 using Xunit;

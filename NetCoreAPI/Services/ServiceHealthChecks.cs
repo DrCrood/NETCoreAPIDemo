@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 
-namespace NetCoreAPI.Services
+namespace DotNET5API.Services
 {
     public class APIHealthChecks : IHealthCheck
     {

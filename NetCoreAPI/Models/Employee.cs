@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
-using NetCoreAPI.Interfaces;
+using DotNET5API.Interfaces;
 
-namespace NetCoreAPI.Models
+namespace DotNET5API.Models
 {
     public class Employee : IEmployee
     {

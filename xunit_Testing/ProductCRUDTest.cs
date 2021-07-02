@@ -1,5 +1,5 @@
 using System;
-using NetCoreAPI.Models;
+using DotNET5API.Models;
 using Xunit;
 using Moq;
 

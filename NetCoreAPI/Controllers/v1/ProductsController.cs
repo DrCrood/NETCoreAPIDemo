@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using NetCoreAPI.Models;
+using DotNET5API.Models;
 using RockLib.Logging;
-using NetCoreAPI.Interfaces;
+using DotNET5API.Interfaces;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 
 //Build model class and DbContext class first and then use following steps to generate the Controller code:
 //Right click Controller folder: Add>New Scaffolded Item> API Controller with actions, using Entity Framework
 
-namespace NetCoreAPI.Controllers.v1
+namespace DotNET5API.Controllers.v1
 {
     [ApiVersion("1.0")]  //Can support multiple versionings
     [ApiVersion("3.0")]  //potential conflict with endpoints at other version's controller

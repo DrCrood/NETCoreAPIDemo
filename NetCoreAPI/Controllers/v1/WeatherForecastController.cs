@@ -3,10 +3,10 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NetCoreAPI.Models;
+using DotNET5API.Models;
 using System.Threading.Tasks;
 
-namespace NetCoreAPI.Controllers.v1
+namespace DotNET5API.Controllers.v1
 {
     [ApiVersion("1.0")]
     [ApiVersion("2.0")]  //support additional versions

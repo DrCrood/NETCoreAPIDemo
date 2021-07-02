@@ -7,7 +7,7 @@ using NLog;
 using NLog.Config;
 using NLog.Targets;
 
-namespace NetCoreAPI.Services
+namespace DotNET5API.Services
 {
     public interface IServiceLog
     {

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NetCoreAPI.Models
+namespace DotNET5API.Models
 {
     public class EmployeeDBContext : DbContext
     {

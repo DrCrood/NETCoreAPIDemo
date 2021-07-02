@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 
-namespace NetCoreAPI.Services
+namespace DotNET5API.Services
 {
     public static class MiddlewareExtensions
     {

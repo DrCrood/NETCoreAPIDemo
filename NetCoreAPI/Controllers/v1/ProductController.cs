@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using NetCoreAPI.Models;
+using DotNET5API.Models;
 using System.Linq;
 using RockLib.Logging;
 using System.Threading.Tasks;
@@ -11,7 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 
-namespace NetCoreAPI.Controllers.v1
+namespace DotNET5API.Controllers.v1
 {
     [ApiVersion("1.0")]  //router based versioning
     [ApiVersion("5.0")]  //support other versions as well

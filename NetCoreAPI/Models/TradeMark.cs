@@ -1,6 +1,6 @@
-﻿using NetCoreAPI.Interfaces;
+﻿using DotNET5API.Interfaces;
 
-namespace NetCoreAPI.Models
+namespace DotNET5API.Models
 {
     public class TradeMark : ITradeMark
     {

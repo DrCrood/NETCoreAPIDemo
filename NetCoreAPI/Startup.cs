@@ -7,18 +7,18 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using NetCoreAPI.Services;
+using DotNET5API.Services;
 using System;
-using NetCoreAPI.Controllers;
+using DotNET5API.Controllers;
 using Microsoft.AspNetCore.Mvc.Versioning;
-using NetCoreAPI.Models;
+using DotNET5API.Models;
 using Microsoft.EntityFrameworkCore;
 using RockLib.Logging.DependencyInjection;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authentication.Cookies;
 
-namespace NetCoreAPI
+namespace DotNET5API
 {
     public class Startup
     {

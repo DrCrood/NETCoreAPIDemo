@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using NetCoreAPI.Models;
+using DotNET5API.Models;
 
-namespace NetCoreAPI.Controllers.v1
+namespace DotNET5API.Controllers.v1
 {
     [ApiVersion("1.0")]  //router based versioning
     [Route("api/v{version:apiVersion}/[controller]")]

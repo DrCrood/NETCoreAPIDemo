@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NetCoreAPI.Controllers
+namespace DotNET5API.Controllers
 {
     //This class is used to help swagger to differentiate API versions
     public class GroupByNamespaceConvention : IControllerModelConvention

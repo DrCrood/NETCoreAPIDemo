@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NetCoreAPI.Services
+namespace DotNET5API.Services
 {
     public class RequestResponseTimeMiddleware
     {

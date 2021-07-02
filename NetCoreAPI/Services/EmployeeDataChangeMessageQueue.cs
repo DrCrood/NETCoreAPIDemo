@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace NetCoreAPI.Services
+namespace DotNET5API.Services
 {
     public interface IBackgroundTaskQueue
     {

@@ -1,10 +1,10 @@
 ﻿using System;
-using NetCoreAPI.Interfaces;
+using DotNET5API.Interfaces;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Threading.Tasks;
 
-namespace NetCoreAPI.Models
+namespace DotNET5API.Models
 {
     public class Product: IProduct
     {

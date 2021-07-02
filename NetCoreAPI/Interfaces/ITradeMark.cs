@@ -1,5 +1,5 @@
 ﻿
-namespace NetCoreAPI.Interfaces
+namespace DotNET5API.Interfaces
 {
     public interface ITradeMark
     {

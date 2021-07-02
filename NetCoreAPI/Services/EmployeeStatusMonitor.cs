@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using NetCoreAPI.Models;
+using DotNET5API.Models;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 using System.Threading;
 
-namespace NetCoreAPI.Services
+namespace DotNET5API.Services
 {
     public class EmployeeStatusMonitor : BackgroundService
     {

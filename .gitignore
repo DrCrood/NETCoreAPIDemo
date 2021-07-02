@@ -1,7 +1,9 @@
 /.vs/*
 /.git/*
-/NetCoreAPI/bin/*
-/NetCoreAPI/obj/*
-/NetCoreAPI/*.db
+/DotNET5API/bin/*
+/DotNET5API/obj/*
+/DotNET5API/*.db
 /xunit_Testing/bin/*
 /xunit_Testing/obj/*
+/NetCoreAPI/obj
+/NetCoreAPI/bin/Debug/net5.0
